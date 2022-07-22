@@ -1,18 +1,15 @@
-import VueRouter from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
-import Login from '../views/Login.vue';
 import Cart from '../views/Cart.vue';
 import { useStore } from "vuex";
 import store from "../store/index";
 
 const routes = [
-  { path: '/', name: 'Home', component: Home, meta: { requiredAuth: true } },
-  { path: "/login", name: 'Login', component: Login },
-  { path: '/cart', name: 'Cart', component: Cart, meta: { requiredAuth: true } },
-  { path: '/:catchAll(.*)', name: "cathAll", component: Login }
+  { path: '/', name: 'Home', component: Home },
+  { path: '/cart', name: 'Cart', component: Cart },
 ];
 
-const router = VueRouter({
+const router = createRouter({
   history: createWebHistory(),
   routes
 })
@@ -33,4 +30,3 @@ router.beforeEach((to, from, next) => {
   }
 })
 export default router
-
