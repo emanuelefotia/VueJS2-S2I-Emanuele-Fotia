@@ -1,4 +1,4 @@
-# vuejs-ecommerce
+Progetto Vue.js 2 - Start2Impact - Emanuele Fotia
 
 ## Project setup
 ```
