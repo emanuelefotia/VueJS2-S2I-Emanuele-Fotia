@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <Nav class="navbar-brand" />
+            <NavBar class="navbar-brand" />
         </nav>
         <div class="page-container">
             <Products v-if="!showProduct()" />
@@ -10,9 +10,9 @@
     </div>
 </template>
 <script setup>
-import Nav from "../components/Nav.vue";
-import Products from "../components/product/ProductsList.vue";
-import SingleProduct from "../components/product/SingleProduct.vue";
+import NavBar from "../components/NavBar.vue";
+import Products from "../components/product/AllProducts.vue";
+import SingleProduct from "../components/product/ProductPage.vue";
 import { useStore } from "vuex";
 const store = useStore();
 const showProduct = () => {

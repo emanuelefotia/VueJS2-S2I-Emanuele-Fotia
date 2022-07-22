@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Nav />
+    <NavBar />
     <div class="row d-flex justify-content-center">
       <div class="list-group col-8">
         <ul v-for="item in cart" :key="item.product.name"
@@ -55,7 +55,7 @@
 <script setup >
 import { computed } from "@vue/reactivity";
 import { useStore } from "vuex";
-import Nav from "../components/Nav.vue";
+import NavBar from "../components/NavBar.vue";
 const store = useStore();
 const cart = computed(() => store.getters["cart/cartProducts"]);
 const discount = () => {
