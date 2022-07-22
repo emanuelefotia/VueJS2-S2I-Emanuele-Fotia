@@ -1,5 +1,5 @@
 import axios from 'axios'
-import shop from '../../api/shop'
+import shop from '../../axios/axios'
 // initial state
 const state = {
     all: [],

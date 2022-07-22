@@ -2,7 +2,7 @@
   <div>
     <nav id="store" class="navbar navbar-expand-lg navbar-dark fixed-top">
       <router-link :to="{ name: 'Home' }" class="navbar-brand" style="padding-left: 1rem;">
-        Store
+        Kreas
       </router-link>
 
       <div>
