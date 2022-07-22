@@ -16,11 +16,11 @@
           <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
             <button type="button" v-if="!checkInCart(product)" @click="handleAddToCartButton(product)"
               :disabled="checkInCart(product)" class="btn btn-outline-warning" style="color:black">
-              Add To Cart
+              Add to Cart
             </button>
             <button type="button" v-if="checkInCart(product)" @click="handleAddToCartButton(product)"
               :disabled="checkInCart(product)" class="btn btn-outline-warning" style="color:black">
-              Already in Cart
+              Added to Cart
             </button>
             <button type="button" @click="handleClose" class="btn btn-outline-warning" style="color:black">
               Close
@@ -31,19 +31,6 @@
     </div>
   </div>
 </template>
-
-<!--<template>
-<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
-
-  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
-
-  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
-</div>
-</template>-->
 
 
 
