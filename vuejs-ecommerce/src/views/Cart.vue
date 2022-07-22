@@ -10,7 +10,7 @@
               <img :src="item.product.image" class="card-img-top" />
               <p class="h4">{{ item.product.name }}</p>
               <div>
-
+                <div class="d-flex justify-content-center">
                 <ul class="list-group list-group-horizontal list-group-flush">
                   <li class="list-group-item"><img @click="handleDecButton(item.product)"
                       src="https://img.icons8.com/material-rounded/24/000000/filled-minus-2-math.png" /></li>
@@ -21,13 +21,10 @@
                   <li class="list-group-item"> <img @click="handleIncButton(item.product)"
                       src="https://img.icons8.com/material-rounded/24/000000/filled-plus-2-math.png" />
                   </li>
-                  <li class="list-group-item">     <img @click="handleRemoveButton(item.product)"
-                  src="https://img.icons8.com/material/24/000000/circled-x.png" />
-
-                  </li>
                 </ul>
+                </div>
                 <!-- Remove from cart -->
-
+                 <p class="text-danger" @click="handleRemoveButton(item.product)">Remove</p>
             
               </div>
               <div class="mr-2">
