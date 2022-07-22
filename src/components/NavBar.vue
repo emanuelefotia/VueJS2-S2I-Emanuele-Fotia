@@ -23,5 +23,4 @@ import { useStore } from "vuex";
 const store = useStore();
 const router = useRouter();
 const cartItemCount = computed(() => store.getters["cart/cartItemCount"]);
-const isLoggedIn = computed(() => store.getters["auth/isLoggedIn"]);
 </script>
