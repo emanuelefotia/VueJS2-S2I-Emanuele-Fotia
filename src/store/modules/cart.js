@@ -1,10 +1,8 @@
-// initial state
 const state = {
     items: [],
     discount: false
 }
 
-// getters
 const getters = {
     cartProducts: (state, getters) => {
         return state.items;
@@ -12,7 +10,7 @@ const getters = {
 
     cartTotalPrice: (state) => {
         let sum = 0;
-        state.discount = false; 
+        state.discount = false;
         for (let i = 0; i < state.items.length; i++) {
             sum += state.items[i].product.price * state.items[i].quantity;
         }
@@ -26,8 +24,8 @@ const getters = {
     },
 
     checkDiscount: (state) => {
-        return state.discount; 
-    }, 
+        return state.discount;
+    },
     cartItemCount: (state) => {
         return state.items.length;
     },
@@ -42,7 +40,6 @@ const getters = {
     },
 }
 
-// actions
 const actions = {
 
     addProductToCart({ commit }, { product, quantity = 0 }) {
@@ -54,7 +51,7 @@ const actions = {
 
     },
     discount({ commit }) {
-        commit("SET_DISCOUNT", false); 
+        commit("SET_DISCOUNT", false);
         console.log(state.discount);
         if (state.items.length > 2) {
             commit("SET_DISCOUNT", true);
@@ -75,7 +72,6 @@ const actions = {
     }
 }
 
-// mutations
 const mutations = {
 
     SET_DISCOUNT(state, value) {

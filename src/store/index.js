@@ -5,8 +5,8 @@ import createPersistedState from "vuex-persistedstate";
 
 export default createStore({
     modules: {
-        products, 
+        products,
         cart
-    }, 
+    },
     plugins: [createPersistedState()]
 })

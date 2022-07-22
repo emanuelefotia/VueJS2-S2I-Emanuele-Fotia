@@ -13,7 +13,7 @@
           <div>
             <p class="h8"><strong>€{{ product.price }}</strong></p>
           </div>
-          <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+          <div class="btn-group blocks" role="group" aria-label="Basic checkbox toggle button group">
             <button type="button" v-if="!checkInCart(product)" @click="handleAddToCartButton(product)"
               :disabled="checkInCart(product)" class="btn btn-outline-warning" style="color:black">
               Add to Cart
@@ -60,11 +60,12 @@ const handleAddToCartButton = (product) => {
 
 <style>
 .btn {
-  border-radius: 0%;
   font-weight: bold;
   background: teal;
   border: teal;
+  margin: 0 5px;
 }
+
 .btn:hover {
   background: #00b4b4;
 }
