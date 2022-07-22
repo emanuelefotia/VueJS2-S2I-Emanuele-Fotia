@@ -23,12 +23,7 @@ import { useStore } from "vuex";
 const store = useStore();
 const products = computed(() => store.state.products.all);
 store.dispatch("products/getAllProducts");
-const handleAddToCartButton = (product) => {
-  store.dispatch("cart/addProductToCart", {
-    product: product,
-    quantity: 1,
-  });
-};
+
 const handleImageClick = (product) => {
   store.dispatch("products/setShowProduct", {
     product: product,
