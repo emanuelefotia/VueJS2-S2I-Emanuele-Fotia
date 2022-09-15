@@ -1,4 +1,5 @@
 Progetto Vue.js 2 - Start2Impact - Emanuele Fotia
+https://ef-tictactoe.netlify.app/
 
 ## Project setup
 ```
